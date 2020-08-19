@@ -1,0 +1,36 @@
+Notes on Django tutorial:
+
+1. I dont understand how a database works
+
+  Databases are built upon tables: columns represent the fields(of data) and the rows represent the each record of data, which has been saved on the database.
+
+  WHAT IS A PRIMARY KEY?
+  A PRIMARY KEY is a data field that is specific to that record, and hence uniquely identifies each table record.
+  Each database record has one primary key.
+  You can think of them as an address.  If the rows in a table were mailboxes, then the primary key would be the listing of street addresses.
+
+  WHAT IS A FOREIGN KEY?
+  A FOREIGN KEY is a key used to link two tables together: A FOREIGN KEY is a field / collection of fields in one table that refers to the PRIMARY KEY in another table.
+
+  For example:
+  author = models.ForeignKey('Author', on_delete=models.SET_NULL, null=True) refers to the primary key of the model/class Author(not defined yet, hence the string)
+
+  WHAT IS A VIEW FUNCTION?
+  A view is a function that processes an HTTP request, fetches the required data from the database,
+  renders the data in an HTML page using an HTML template, and then returns the generated HTML in an HTTP response to display the page to the user.
+  The index view follows this model — it fetches information about the number of Book, BookInstance,
+  available BookInstance and Author records that we have in the database, and passes that information to a template for display.
+
+
+
+QUESTIONS:
+
+  How do each of the models interact with eachother?
+
+  What do ManyToManyFields and ManToOneFiels(ForeignKey) do and how does it know in a table which primary key to take?
+
+  How does the method get_absolute_url work?
+
+  What is the difference between verbose-name and __str__()?
+
+  Do sites like instagram still have a django admin site?
